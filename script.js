@@ -23,8 +23,6 @@ function gamePlay(player,playerScore, computerScore){ // main gameplay function
     result = judgement(player, computer);
     displayResults(player, computer, result);
     score = scoreUp(result, playerScore, computerScore);
-    
-
 
     return score;
 };
@@ -194,11 +192,6 @@ function reset(playerScore, computerScore){
     results.textContent = "Choose your fighter!";
     explanation.textContent = "First to 5 points wins the game";
 
-
-
-    
-
-
 }
 
 function winner(playerScore, computerScore){ 
@@ -236,9 +229,6 @@ function winner(playerScore, computerScore){
     return [playerScore, computerScore];
 
 }
-
-
-
 
 
 rockChoice.addEventListener("click", ()=> { //adding event listeners for all 3 buttons

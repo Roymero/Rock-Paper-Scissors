@@ -6,6 +6,31 @@ let computer;
 let player;
 let score;
 
+const rockChoice = document.getElementById('rockChoice');
+const paperChoice = document.getElementById('paperChoice');
+const scissorsChoice = document.getElementById('scissorsChoice');
+
+
+rockChoice.addEventListener("click", ()=> {
+    player = "rock";
+    console.log(player)
+
+})
+
+paperChoice.addEventListener("click", ()=> {
+    player = "paper";
+    console.log(player)
+
+})
+
+scissorsChoice.addEventListener("click", ()=> {
+    player = "scissors";
+    console.log(player)
+
+})
+
+
+
 
 function gamePlay(){ // function that's grabbing, validating then returning user input 
     var userInput = window.prompt("Rock Paper or Scissors?");
@@ -18,6 +43,13 @@ function gamePlay(){ // function that's grabbing, validating then returning user
     };
 
     return userInput;
+
+};
+
+function chooseRock(player){
+    
+    player = "rock"
+    return "rock"
 
 };
 
@@ -114,17 +146,10 @@ function winner(playerScore, computerScore){ // Function that announces winner
 
 
 
-while ((playerScore < 5) && (computerScore < 5)) {
-    player = gamePlay();
-    computer = computerPlay();
-    result = judgement(player, computer);
-    score = scoreUp(result, playerScore, computerScore);
-    playerScore = score[0];
-    computerScore = score[1];
-    resultAlert(player, playerScore, computer, computerScore);
-}
+computer = computerPlay();
 
-winner(playerScore, computerScore);
+
+
 
 
 

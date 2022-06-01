@@ -1,0 +1,181 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: 'Roboto', 'Sans Serif';
+}
+
+
+.body{
+   
+    display: flex;
+}
+
+.header{
+    display: flex;
+    
+}
+
+.headerContainer{
+    width: 100%;
+    height: 12vh;
+    background-color: #111720;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+}
+
+
+.logo{
+    font-family: 'Press Start 2p', cursive;
+    color: rgb(0, 255, 145);
+    font-size: 40px;
+    font-weight: 700;
+    align-self: center;
+
+    
+}
+
+.bodyContainerTop{
+    width: 100%;
+    height: 15vh;
+    background-color: #222831;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color:rgb(249, 250, 248);
+}
+
+.bodyContainerMiddle{
+    width: 100%;
+    height: 30vh;
+    background-color: #222831;
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color:rgb(249, 250, 248);
+}
+
+.bodyContainerBottom{
+    width: 100%;
+    height: 30vh;
+    background-color: #222831;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    
+}
+
+.footer{
+    width: 100%;
+    background-color: #222831;
+    height: 12vh;
+    color:rgb(249, 250, 248) ;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+}
+
+.gameDescription{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.score{
+    margin-bottom: 10px;
+    font-size: 22px
+}
+
+.player{
+    
+    margin-right: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.playerScore{
+    margin-left: 12px;
+}
+
+.computer{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rockButton{
+    background-color: #393e46;
+    height: 160px;
+    width: 160px;
+    border-radius: 10px;
+    border: none;
+    transition: .1s;
+    
+    
+}
+
+
+.rockButton:hover{
+    background-color: rgba(235, 235, 247, 0.3);
+
+}
+
+.rockButton:focus{
+    background-color: rgba(235, 235, 247, 0.5);
+}
+
+
+.paperButton{
+    background-color: #393e46;
+    height: 160px;
+    width: 160px;
+    border-radius: 10px;
+    border: none;
+}
+
+.paperButton:hover{
+    background-color: rgba(235, 235, 247, 0.3);
+
+}
+
+.paperButton:focus{
+    background-color: rgba(235, 235, 247, 0.5);
+}
+
+.scissorsButton{
+    background-color: #393e46;
+    height: 160px;
+    width: 160px;
+    border-radius: 10px;
+    border: none;
+}
+
+
+.scissorsButton:hover{
+    background-color: rgba(235, 235, 247, 0.3);
+
+}
+
+.scissorsButton:focus{
+    background-color: rgba(235, 235, 247, 0.5);
+}
+
+.copyright{
+    margin-bottom: 12px;
+    margin-right: 8px;
+}
+
+.duddy{
+   height: 50px;
+   width: 50px;
+
+}

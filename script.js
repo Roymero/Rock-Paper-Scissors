@@ -267,13 +267,3 @@ scissorsChoice.addEventListener("click", ()=> {
 })
 
 
-
-
-
-
-
-
-
-
-
-

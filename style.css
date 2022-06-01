@@ -129,7 +129,7 @@
 
 }
 
-.rockButton:focus{
+.rockButton:active{
     background-color: rgba(235, 235, 247, 0.5);
 }
 
@@ -147,7 +147,7 @@
 
 }
 
-.paperButton:focus{
+.paperButton:active{
     background-color: rgba(235, 235, 247, 0.5);
 }
 
@@ -165,7 +165,7 @@
 
 }
 
-.scissorsButton:focus{
+.scissorsButton:active{
     background-color: rgba(235, 235, 247, 0.5);
 }
 

@@ -5,6 +5,7 @@ let player;
 let score;
 let play;
 
+
 const rockChoice = document.getElementById('rockChoice'); // grabbing element ID's from my  3 buttons
 const paperChoice = document.getElementById('paperChoice');
 const scissorsChoice = document.getElementById('scissorsChoice');
@@ -20,7 +21,6 @@ function gamePlay(player,playerScore, computerScore){ // main gameplay function
     computer = computerPlay();
     playerChoice(player);
     result = judgement(player, computer);
-    console.log(result);
     displayResults(player, computer, result);
     score = scoreUp(result, playerScore, computerScore);
     
@@ -163,11 +163,77 @@ function resultAlert(player, playerScore, computer, computerScore){ // function 
 
 }
 
-function winner(playerScore, computerScore){ 
+function modalAdd(){
+    const endpops = document.getElementById("endpops");
+    const overlay = document.getElementById("overlay");  
+    endpops.classList.add('active');
+    overlay.classList.add('active'); 
+
+
+
+}
+
+function modalRemove(){
+    endpops.classList.remove('active');
+    overlay.classList.remove('active');
+}
+
+function reset(playerScore, computerScore){
+
+    document.getElementById("p1").src="./images/getReady1.png";
+    document.getElementById("p2").src="./images/getReady1.png";
+    
+    const pScore = document.getElementById("pScore");
+    pScore.textContent = "Player: "  + playerScore;
+
+    const cScore = document.getElementById("cScore");
+    cScore.textContent = "Computer: "  + computerScore;
+
+    const results = document.getElementById("results");
+    const explanation = document.getElementById("explanation");
+    results.textContent = "Choose your fighter!";
+    explanation.textContent = "First to 5 points wins the game";
+
+
+
     
 
 
+}
 
+function winner(playerScore, computerScore){ 
+
+
+    const playAgainPress = document.getElementById("playAgainPress");
+
+    if(playerScore == 5){
+        const resultTexts = document.getElementById("resultTexts");
+        resultTexts.textContent = "You Won!"
+        modalAdd();
+        playerScore = 0;
+        computerScore = 0;
+        playAgainPress.addEventListener("click", ()=> {
+            reset(playerScore, computerScore);
+            modalRemove();
+        })
+
+
+    }
+    else if(computerScore == 5){
+        const resultTexts = document.getElementById("resultTexts");
+        resultTexts.textContent = "You Lost..";
+        modalAdd();
+        playerScore = 0;
+        computerScore = 0;
+        playAgainPress.addEventListener("click", ()=> {
+            reset(playerScore, computerScore);
+            modalRemove();
+        })
+
+
+    }
+
+    return [playerScore, computerScore];
 
 }
 
@@ -175,11 +241,14 @@ function winner(playerScore, computerScore){
 
 
 
-rockChoice.addEventListener("click", ()=> {
+rockChoice.addEventListener("click", ()=> { //adding event listeners for all 3 buttons
    score = gamePlay("rock", playerScore, computerScore);
    playerScore = score[0];
    computerScore = score[1];
-   winner(playerScore, computerScore);
+   score = winner(playerScore, computerScore);
+   playerScore = score[0];
+   computerScore = score[1]
+  
 
     
 })
@@ -188,7 +257,9 @@ paperChoice.addEventListener("click", ()=> {
     score = gamePlay("paper", playerScore, computerScore);
     playerScore = score[0];
     computerScore = score[1];
-    winner(playerScore, computerScore);
+    score = winner(playerScore, computerScore);
+    playerScore = score[0];
+    computerScore = score[1]
    
 
 })
@@ -197,7 +268,10 @@ scissorsChoice.addEventListener("click", ()=> {
     score = gamePlay("scissors", playerScore, computerScore);
     playerScore = score[0];
     computerScore = score[1];
-    winner(playerScore, computerScore);
+    score = winner(playerScore, computerScore);
+    playerScore = score[0];
+    computerScore = score[1]
+   
     
 
 })

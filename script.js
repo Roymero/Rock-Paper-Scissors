@@ -11,8 +11,6 @@ const paperChoice = document.getElementById('paperChoice');
 const scissorsChoice = document.getElementById('scissorsChoice');
 
 
-
-
 function gamePlay(player,playerScore, computerScore){ // main gameplay function
     let computer;
     let result;
@@ -161,7 +159,7 @@ function resultAlert(player, playerScore, computer, computerScore){ // function 
 
 }
 
-function modalAdd(){
+function modalAdd(){ //function to add modal to screen
     const endpops = document.getElementById("endpops");
     const overlay = document.getElementById("overlay");  
     endpops.classList.add('active');
@@ -171,7 +169,7 @@ function modalAdd(){
 
 }
 
-function modalRemove(){
+function modalRemove(){ // function to remove modal off screen
     endpops.classList.remove('active');
     overlay.classList.remove('active');
 }
@@ -194,8 +192,8 @@ function reset(playerScore, computerScore){
 
 }
 
-function winner(playerScore, computerScore){ 
-
+function winner(playerScore, computerScore){  //Function to check if a winner has been decided and showing proper
+                                              // image with modal
 
     const playAgainPress = document.getElementById("playAgainPress");
 
@@ -209,8 +207,6 @@ function winner(playerScore, computerScore){
             reset(playerScore, computerScore);
             modalRemove();
         })
-
-
     }
     else if(computerScore == 5){
         const resultTexts = document.getElementById("resultTexts");
@@ -222,8 +218,6 @@ function winner(playerScore, computerScore){
             reset(playerScore, computerScore);
             modalRemove();
         })
-
-
     }
 
     return [playerScore, computerScore];

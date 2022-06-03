@@ -161,7 +161,7 @@ function resultAlert(player, playerScore, computer, computerScore){ // function 
 
 }
 
-function modalAdd(){
+function modalAdd(){ // Activating modal
     const endpops = document.getElementById("endpops");
     const overlay = document.getElementById("overlay");  
     endpops.classList.add('active');
@@ -171,7 +171,7 @@ function modalAdd(){
 
 }
 
-function modalRemove(){
+function modalRemove(){ // Removing modal
     endpops.classList.remove('active');
     overlay.classList.remove('active');
 }
@@ -194,7 +194,8 @@ function reset(playerScore, computerScore){
 
 }
 
-function winner(playerScore, computerScore){ 
+function winner(playerScore, computerScore){ // Function that checks if a winner has been determined 
+                                             // If so proper message is displayed and modal pops up
 
 
     const playAgainPress = document.getElementById("playAgainPress");

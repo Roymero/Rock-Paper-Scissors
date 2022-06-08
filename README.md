@@ -1,6 +1,6 @@
 # Rock Paper Scissors
 - First to 5 wins RPS
-- Click on the button to make your choice
+- Click on one of the three buttons to make your choice
 - Live demo -> [play](https://roymero.github.io/Rock-Paper-Scissors/)
 # What I learned
 - Furthered my skills in HTML, CSS, and JS synergy

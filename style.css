@@ -3,6 +3,7 @@
     padding: 0px;
     overflow-x: hidden;
     overflow-y: hidden;
+    
     font-family: 'Roboto', 'Sans Serif';
 }
 
@@ -19,11 +20,10 @@
 
 .headerContainer{
     width: 100%;
-    height: 12vh;
     background-color: #111720;
     display: flex;
     justify-content: center;
-    padding: 8px;
+    padding: 40px 0px;
 }
 
 
@@ -75,7 +75,7 @@
 .footer{
     width: 100%;
     background-color: #222831;
-    height: 12vh;
+    height: 13vh;
     color:rgb(249, 250, 248) ;
     display: flex;
     justify-content: center;
@@ -112,7 +112,7 @@
     justify-content: center;
 }
 
-.rockButton{
+.rock-Button{
     background-color: #393e46;
     height: 160px;
     width: 160px;
@@ -124,17 +124,17 @@
 }
 
 
-.rockButton:hover{
+.rock-Button:hover{
     background-color: rgba(235, 235, 247, 0.3);
 
 }
 
-.rockButton:active{
+.rock-Button:active{
     background-color: rgba(235, 235, 247, 0.5);
 }
 
 
-.paperButton{
+.paper-Button{
     background-color: #393e46;
     height: 160px;
     width: 160px;
@@ -142,16 +142,16 @@
     border: none;
 }
 
-.paperButton:hover{
+.paper-Button:hover{
     background-color: rgba(235, 235, 247, 0.3);
 
 }
 
-.paperButton:active{
+.paper-Button:active{
     background-color: rgba(235, 235, 247, 0.5);
 }
 
-.scissorsButton{
+.scissors-Button{
     background-color: #393e46;
     height: 160px;
     width: 160px;
@@ -160,12 +160,12 @@
 }
 
 
-.scissorsButton:hover{
+.scissors-Button:hover{
     background-color: rgba(235, 235, 247, 0.3);
 
 }
 
-.scissorsButton:active{
+.scissors-Button:active{
     background-color: rgba(235, 235, 247, 0.5);
 }
 
@@ -246,4 +246,80 @@
 #overlay.active{
     opacity: 1;
     pointer-events: all;
+}
+
+
+/* Media Queries */
+
+@media(max-width: 550px){
+
+    .logo{
+
+        font-size: 18px;
+
+    }
+
+    .gameDescription{
+
+        font-size: 26px;
+    }
+
+    .score{
+
+        font-size: 20px;
+
+    }
+
+
+    .bodyContainerBottom{
+
+        gap: 10px;
+    }
+
+    .rock-Button, .paper-Button,.scissors-Button{
+
+        width: 100px;
+        height: 100px;
+
+    }
+
+    .rock-Button > img,.paper-Button > img, .scissors-Button > img {
+
+        height: 75px;
+        width: 75px;
+    }
+
+    .sign{
+
+        height: 100px;
+        width: 100px;
+
+    }
+
+    .playerscore{
+
+        font-size: 22px;
+  
+    }
+
+    .computerscore{
+
+        font-size: 22px;
+    }
+
+    .footer{
+
+        height: 14.5vh;
+    }
+
+
+    .endpop{
+
+        width: 95%;
+    }
+
+
+
+
+
 }
